@@ -4,7 +4,7 @@ class ExpenseTracker:
 
     def add_expense(self, category, amount):
         if category in self.expenses:
-            self.expenses[category] += amount
+            self.expenses[category] = self.expenses[category] + amount
         else:
             self.expenses[category] = amount
 
@@ -12,9 +12,9 @@ class ExpenseTracker:
         print("\nExpense Summary:")
         total_expense = 0
         for category, amount in self.expenses.items():
-            print(f"{category}: ${amount}")
+            print(f"{category}: Rs{amount}")
             total_expense += amount
-        print(f"\nTotal Expense: ${total_expense}")
+        print(f"\nTotal Expense: Rs{total_expense}")
 
     def main_menu(self):
         while True:
@@ -29,7 +29,7 @@ class ExpenseTracker:
                 category = input("Enter expense category: ")
                 amount = float(input("Enter expense amount: "))
                 self.add_expense(category, amount)
-                print("Expense added successfully!")
+                print("Expenses added successfully!")
 
             elif choice == "2":
                 self.view_expenses()
