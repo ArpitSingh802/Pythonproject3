@@ -35,7 +35,7 @@ class ExpenseTracker:
                 self.view_expenses()
 
             elif choice == "3":
-                print("Exiting Expense Tracker. Goodbye!")
+                print("Exiting Expense Tracker. Thankyou!")
                 break
 
             else:
