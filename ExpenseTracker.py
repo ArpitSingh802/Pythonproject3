@@ -12,9 +12,9 @@ class ExpenseTracker:
         print("\nExpense Summary:")
         total_expense = 0
         for category, amount in self.expenses.items():
-            print(f"{category}: Rs{amount}")
+            print(f"{category}: ${amount}")
             total_expense += amount
-        print(f"\nTotal Expense: Rs{total_expense}")
+        print(f"\nTotal Expense: ${total_expense}")
 
     def main_menu(self):
         while True:
